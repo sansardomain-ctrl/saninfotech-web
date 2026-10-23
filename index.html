@@ -25,8 +25,8 @@
 <meta name="twitter:title" content="SAN Info Tech | IT Training, AI &amp; Software Development" />
 <meta name="twitter:description" content="SAN Info Tech offers technology training, software development, AI solutions, college internships, technical workshops, and digital solutions for students and businesses." />
 
-<!-- Favicon (inline SVG) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231769FF'/%3E%3Cstop offset='1' stop-color='%23398BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M20 42c0-3 3-5 8-5s8 2 8 5M16 30c0-6 6-10 16-10s16 4 16 10M22 36c0-4 5-7 10-7s10 3 10 7' stroke='white' stroke-width='3' stroke-linecap='round' fill='none' opacity='0.95'/%3E%3Ccircle cx='32' cy='22' r='4' fill='white'/%3E%3C/svg%3E" />
+<link rel="icon" href="assets/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
 
 <!-- Preconnect for fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,6 +40,7 @@
   "@type": "Organization",
   "name": "SAN Info Tech",
   "url": "https://www.saninfotechai.in/",
+  "logo": "https://www.saninfotechai.in/assets/logo.png",
   "description": "SAN Info Tech offers technology training, software development, AI solutions, college internships, technical workshops, and digital solutions for students and businesses.",
   "slogan": "Learn Technology. Build Innovation. Shape the Future.",
   "telephone": "+91-93635-53032",
@@ -238,22 +239,7 @@ p{color:var(--muted);font-size:1.02rem}
 <header class="nav" id="nav" role="banner">
   <div class="container nav-inner">
     <a href="#home" class="brand" aria-label="SAN Info Tech home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="40" height="40">
-          <defs>
-            <linearGradient id="navBrandG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#1769FF"/><stop offset="1" stop-color="#398BFF"/>
-            </linearGradient>
-          </defs>
-          <rect width="40" height="40" rx="11" fill="url(#navBrandG)"/>
-          <path d="M13 27c0-2 2-3 5-3s5 1 5 3M11 21c0-4 4-7 10-7s10 3 10 7M14 24c0-3 3-5 6-5s6 2 6 5" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <circle cx="20" cy="14" r="2.4" fill="#fff"/>
-        </svg>
-      </span>
-      <span class="brand-text">
-        <span class="brand-name">SAN <em>Info Tech</em></span>
-        <span class="brand-tag">Learn. Build. Innovate.</span>
-      </span>
+      <img class="brand-logo" src="assets/logo.png" alt="SAN Info Tech — Learn. Build. Innovate." width="194" height="52" />
     </a>
 
     <nav class="nav-links" aria-label="Primary">
@@ -303,13 +289,9 @@ p{color:var(--muted);font-size:1.02rem}
 .nav.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid var(--border);box-shadow:0 4px 24px rgba(11,23,54,.05)}
 .nav.scrolled .nav-inner{padding:12px 24px}
 
-.brand{display:flex;align-items:center;gap:12px}
-.brand-mark{display:block;transition:transform .4s}
-.brand:hover .brand-mark{transform:rotate(-6deg) scale(1.04)}
-.brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-name{font-family:var(--font-display);font-weight:800;font-size:1.18rem;color:var(--navy);letter-spacing:-.01em}
-.brand-name em{font-style:normal;color:var(--brand);font-weight:700}
-.brand-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.brand{display:flex;align-items:center;line-height:0;flex-shrink:0}
+.brand-logo{display:block;height:52px;width:auto;max-width:none}
+.nav.scrolled .brand-logo{height:46px}
 
 .nav-links{display:flex;align-items:center;gap:6px}
 .nav-links a{
@@ -341,10 +323,11 @@ p{color:var(--muted);font-size:1.02rem}
 .mobile-backdrop{position:fixed;inset:0;background:rgba(11,23,54,.4);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:all .3s;z-index:98}
 .mobile-backdrop.show{opacity:1;visibility:visible}
 
-@media (max-width:980px){
+@media (max-width:1180px){
   .nav-links{display:none}
   .nav-cta-btn{display:none}
   .nav-toggle{display:flex}
+  .nav .brand-logo{height:44px}
 }
 </style>
 
@@ -1730,19 +1713,8 @@ p{color:var(--muted);font-size:1.02rem}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 40 40" width="40" height="40">
-              <defs><linearGradient id="footerBrandG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1769FF"/><stop offset="1" stop-color="#398BFF"/></linearGradient></defs>
-              <rect width="40" height="40" rx="11" fill="url(#footerBrandG)"/>
-              <path d="M13 27c0-2 2-3 5-3s5 1 5 3M11 21c0-4 4-7 10-7s10 3 10 7M14 24c0-3 3-5 6-5s6 2 6 5" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
-              <circle cx="20" cy="14" r="2.4" fill="#fff"/>
-            </svg>
-          </span>
-          <span class="brand-text">
-            <span class="brand-name">SAN <em>Info Tech</em></span>
-            <span class="brand-tag">Learn. Build. Innovate.</span>
-          </span>
+        <a href="#home" class="brand" aria-label="SAN Info Tech home">
+          <img class="brand-logo" src="assets/logo.png" alt="SAN Info Tech — Learn. Build. Innovate." width="232" height="62" />
         </a>
         <p class="footer-desc">Learn Technology. Build Innovation. Shape the Future. SAN Info Tech brings together industry-ready IT training, hands-on internships, intelligent AI solutions, and custom software development for students, colleges, and businesses.</p>
         <div class="footer-social" id="footerSocial" aria-label="Social media links">
@@ -1827,9 +1799,8 @@ p{color:var(--muted);font-size:1.02rem}
 .footer{background:var(--navy);color:#cfd9ef;padding:80px 0 32px;position:relative;overflow:hidden}
 .footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(57,139,255,.5),transparent)}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:32px;margin-bottom:48px}
-.footer-brand .brand-name{color:#fff}
-.footer-brand .brand-name em{color:var(--electric)}
-.footer-brand .brand-tag{color:#7e8db1}
+.footer-brand .brand{display:inline-flex;background:#fff;border-radius:14px;padding:8px 12px;max-width:100%}
+.footer-brand .brand-logo{height:auto;width:min(240px,100%);max-width:100%}
 .footer-desc{font-size:.88rem;line-height:1.65;color:#9eb0d6;margin:20px 0 22px;max-width:340px}
 .footer-social{display:flex;gap:10px}
 .footer-social a{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.06);color:#cfd9ef;transition:all .3s;border:1px solid rgba(255,255,255,.08)}
